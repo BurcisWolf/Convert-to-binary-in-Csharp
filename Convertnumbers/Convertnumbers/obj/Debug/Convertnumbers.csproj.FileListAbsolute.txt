@@ -1,0 +1,10 @@
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\bin\Debug\Convertnumbers.exe.config
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\bin\Debug\Convertnumbers.exe
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\bin\Debug\Convertnumbers.pdb
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.csproj.AssemblyReference.cache
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.Form1.resources
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.Properties.Resources.resources
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.csproj.GenerateResource.cache
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.csproj.CoreCompileInputs.cache
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.exe
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.pdb
