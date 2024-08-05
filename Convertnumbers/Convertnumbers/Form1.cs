@@ -30,7 +30,7 @@ namespace Convertnumbers
         {
             if(number == 0){
                 textBox2.Text = Convert.ToString(number); // If input is 0 than write back 0
-            } else { 
+            } else {
                 string erg = ""; // our end result in string
                 int r; // our rest
                 while(number > 0){
@@ -43,7 +43,24 @@ namespace Convertnumbers
         }
         private void toHexa(Int32 number)
         {
-            // to do
+            if(number == 0)
+            {
+                textBox3.Text = Convert.ToString(number);
+            } else {
+                // label4.Text = number.ToString("X");
+                // Thats the fastest what we could do , converts numbers direcly into Hexadezimal format
+                // ToString("X") means direct convertion, we have more types of method with ToString ...
+                string erg = "";
+                int r;
+                while(number > 0)
+                {   
+                    r = number % 16;
+                    string hexa = r.ToString("X");
+                    erg = hexa + erg;
+                    number = number / 16;
+                }
+                textBox3.Text = erg;  
+            }
         }
         private void CheckNumber(string number)
         {

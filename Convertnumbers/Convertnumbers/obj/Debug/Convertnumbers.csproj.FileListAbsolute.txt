@@ -8,3 +8,7 @@ C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Conve
 C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.csproj.CoreCompileInputs.cache
 C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.exe
 C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.pdb
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\bin\Debug\Convertnumbers.exe.manifest
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\bin\Debug\Convertnumbers.application
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.exe.manifest
+C:\Users\Tomas\Desktop\Projects\Convert-to-binary-in-Csharp\Convertnumbers\Convertnumbers\obj\Debug\Convertnumbers.application
