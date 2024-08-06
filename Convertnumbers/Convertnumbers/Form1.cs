@@ -5,17 +5,19 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
 Made by Tomas Bures
-2.8.2024 - Made basic look and basic funktions we will need
 
 To do
-Convert to Hexadezimal
-Convert also negative number
+Add how do we count from Dezimal to Hexadezimal, same like we added from Dezimal to Binäry
+When press enter it automaticly converts
+Chech all fields and convert from desired system to other systems
+Converting negative numbers
  */
 
 namespace Convertnumbers
@@ -31,14 +33,18 @@ namespace Convertnumbers
             if(number == 0){
                 textBox2.Text = Convert.ToString(number); // If input is 0 than write back 0
             } else {
-                string erg = ""; // our end result in string
-                int r; // our rest
+                string erg = "", text = ""; ; // our end result in string
+                int r, znumber; // our rest
                 while(number > 0){
                     r = number % 2; // count our rest from number, it is always 1 or 0
                     erg = Convert.ToString(r) + erg; // converting our r to string + adding that what we already had to the string
+                    znumber = number;
                     number = number / 2; // diving number by 2 to slowly get to the 0
+                    text = text + (" Rest = " + r + " | " + znumber + " : 2 = " + number + "\n");
+                    label6.Text = Convert.ToString(text);
                 }
                 textBox2.Text = erg; // writing our result into textBox2
+                label6.Text = label6.Text + "\n Wir lesen von unten nach oben";
             }
         }
         private void toHexa(Int32 number)
@@ -84,6 +90,9 @@ namespace Convertnumbers
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "Convertor";
+            label5.Text = "";
+            label6.Text = "";
+            label7.Text = "";
         }
     }
 }
