@@ -11,13 +11,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
-Made by Tomas Bures
+Made by Tomas Bures | https://github.com/BurcisWolf
 
-To do
-Add how do we count from Dezimal to Hexadezimal, same like we added from Dezimal to Binäry
-When press enter it automaticly converts
-Chech all fields and convert from desired system to other systems
+To do:
+Check all fields and convert from desired system to other systems
+Automatic size of a window
+When press enter it automaticly converts the input into other systems
 Converting negative numbers
+add button or something (About app, who made it etc)
+Maybe change the format from Int32 to something else ? Int32 = Value from 0 to 4 294 967 295
  */
 
 namespace Convertnumbers
@@ -41,58 +43,69 @@ namespace Convertnumbers
                     znumber = number;
                     number = number / 2; // diving number by 2 to slowly get to the 0
                     text = text + (" Rest = " + r + " | " + znumber + " : 2 = " + number + "\n");
-                    label6.Text = Convert.ToString(text);
                 }
                 textBox2.Text = erg; // writing our result into textBox2
-                label6.Text = label6.Text + "\n Wir lesen von unten nach oben";
+                label6.Text = text + "\n Wir lesen von unten nach oben";
             }
         }
         private void toHexa(Int32 number)
         {
-            if(number == 0)
-            {
+            if(number == 0){
                 textBox3.Text = Convert.ToString(number);
             } else {
                 // label4.Text = number.ToString("X");
                 // Thats the fastest what we could do , converts numbers direcly into Hexadezimal format
                 // ToString("X") means direct convertion, we have more types of method with ToString ...
-                string erg = "";
-                int r;
-                while(number > 0)
-                {   
+                string erg = "", text = "";
+                int r, znumber;
+                while(number > 0){   
                     r = number % 16;
                     string hexa = r.ToString("X");
+                    znumber = number;
                     erg = hexa + erg;
                     number = number / 16;
+                    text = text + "Rest = " + r.ToString("X") + " | " + znumber + " : 16 = " + number + "\n";
                 }
-                textBox3.Text = erg;  
+                textBox3.Text = erg;
+                label7.Text = text + "\nLesen von unten nach oben";
             }
         }
         private void CheckNumber(string number)
         {
-            textBox2.Text = "";
-            textBox3.Text = "";
-            label4.Text = "";
-            float parse; // Float variable
+            float parse; // Float variable | Only True or False
             if(!float.TryParse(number, out parse)) { // If it is not numbers print something
                 label4.Text = "Use only numbers!"; // Printing text in label4
             } else { // If is it number do some stuff
                 toBinar(Convert.ToInt32(number)); // Calling funktion toBinar and also converting string to Int32
                 toHexa(Convert.ToInt32(number));
             }
-            //Int32 = Value from 0 to 4 294 967 295
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            CheckNumber(textBox1.Text); // Callling a funktion CheckNumbers
+           CheckNumber(textBox1.Text); // Callling a funktion CheckNumbers
+           textBox1.Focus(); // sets a focus on the object - Cursor in textbox
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Text = "Convertor";
+            this.CenterToScreen(); // centering element in the middle of the screen
+            this.Text = "Convertor"; // changing name of the app (the thing we see at the top)
+            this.Width = 600; 
+            label4.Text = "";
             label5.Text = "";
             label6.Text = "";
             label7.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label4.Text = "";
+            label5.Text = "";
+            label6.Text = "";
+            label7.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
     }
 }
