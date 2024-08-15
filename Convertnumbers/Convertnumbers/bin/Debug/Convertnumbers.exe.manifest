@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Convertnumbers.exe" size="11744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Convertnumbers.exe" size="12768">
       <assemblyIdentity name="Convertnumbers" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JHVMtFh4yF7v2wRTBGbJwEMKTz+gnLVWHXCwKtZ6Z50=</dsig:DigestValue>
+        <dsig:DigestValue>Gn8kGEC05MrtPuSzUTC6V1yvhmAYlPkPhRQyflsWoK4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

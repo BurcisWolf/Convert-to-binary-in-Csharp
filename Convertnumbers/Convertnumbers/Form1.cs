@@ -11,15 +11,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
-Made by Tomas Bures | https://github.com/BurcisWolf
+Made by Tomas Bures | https://github.com/BurcisWolf | https://www.burcis.eu
 
 To do:
-Check all fields and convert from desired system to other systems
-Automatic size of a window
+Convert from Hexadezimal to others
+Convert from Binär to others
+Check all fields and convert from desired system to other systems // do as last
 When press enter it automaticly converts the input into other systems
-Converting negative numbers
+Converting negative numbers // as last
 add button or something (About app, who made it etc)
 Maybe change the format from Int32 to something else ? Int32 = Value from 0 to 4 294 967 295
+Automatic size of a window
  */
 
 namespace Convertnumbers
@@ -73,8 +75,8 @@ namespace Convertnumbers
         private void CheckNumber(string number)
         {
             float parse; // Float variable | Only True or False
-            if(!float.TryParse(number, out parse)) { // If it is not numbers print something
-                label4.Text = "Use only numbers!"; // Printing text in label4
+            if(!float.TryParse(number, out parse)) { // If it is not numbers print something or empty
+                label4.Text = "Wrong Input!"; // Printing text in label4
             } else { // If is it number do some stuff
                 toBinar(Convert.ToInt32(number)); // Calling funktion toBinar and also converting string to Int32
                 toHexa(Convert.ToInt32(number));
@@ -85,19 +87,42 @@ namespace Convertnumbers
            CheckNumber(textBox1.Text); // Callling a funktion CheckNumbers
            textBox1.Focus(); // sets a focus on the object - Cursor in textbox
         }
+        private void checkHexa(string input)
+        {
+            if (!string.IsNullOrEmpty(input)) {
+                char[] singleChar = input.ToCharArray(); //splitting our input (whole word in a single characters in an array)
+                string splitted = "";
+                foreach (char charakter in singleChar)
+                {
+                    splitted = splitted + charakter + "\n";
+                }
+                label7.Text = splitted;
+            } else {
+                label4.Text = "Wrong Input!";
+            }
+            
+        }
+        private void checkBinar(string input)
+        {
+            if (!string.IsNullOrEmpty(input))
+            {
 
+            } else
+            {
+                label4.Text = "Wrong Input!";
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             this.CenterToScreen(); // centering element in the middle of the screen
             this.Text = "Convertor"; // changing name of the app (the thing we see at the top)
-            this.Width = 600; 
+            this.Width = 650; 
             label4.Text = "";
             label5.Text = "";
             label6.Text = "";
             label7.Text = "";
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Reset()
         {
             label4.Text = "";
             label5.Text = "";
@@ -106,6 +131,22 @@ namespace Convertnumbers
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox3.Focus();
+            checkHexa(textBox3.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox2.Focus();
+            checkBinar(textBox2.Text);
         }
     }
 }
