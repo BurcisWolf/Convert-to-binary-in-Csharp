@@ -90,10 +90,10 @@ namespace Convertnumbers
         private void checkHexa(string input)
         {
             if (!string.IsNullOrEmpty(input)) {
-                string wholeText = input;
-                int number = Convert.ToInt32(wholeText, 16);
-                string binar = Convert.ToString(number, 2);
-                textBox1.Text = Convert.ToString(number);
+                string wholeText = input; // string with our Hexadecimal value
+                int number = Convert.ToInt32(wholeText, 16); // interprets the string wholeText as a hexadecimal number and converts it to its equivalent decimal integer value.
+                string binar = Convert.ToString(number, 2); // we are converting INT number to string with base 2 - base two means binär
+                textBox1.Text = Convert.ToString(number); // writing into textBox
                 textBox2.Text = Convert.ToString(binar);
             } else {
                 label4.Text = "Wrong Input!";
@@ -105,8 +105,7 @@ namespace Convertnumbers
             if (!string.IsNullOrEmpty(input))
             {
 
-            } else
-            {
+            } else {
                 label4.Text = "Wrong Input!";
             }
         }
