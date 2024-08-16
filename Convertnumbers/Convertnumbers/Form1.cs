@@ -6,6 +6,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,6 @@ using System.Windows.Forms;
 Made by Tomas Bures | https://github.com/BurcisWolf | https://www.burcis.eu
 
 To do:
-Convert from Hexadezimal to others
 Convert from Binär to others
 Check all fields and convert from desired system to other systems // do as last
 When press enter it automaticly converts the input into other systems
@@ -90,13 +90,11 @@ namespace Convertnumbers
         private void checkHexa(string input)
         {
             if (!string.IsNullOrEmpty(input)) {
-                char[] singleChar = input.ToCharArray(); //splitting our input (whole word in a single characters in an array)
-                string splitted = "";
-                foreach (char charakter in singleChar)
-                {
-                    splitted = splitted + charakter + "\n";
-                }
-                label7.Text = splitted;
+                string wholeText = input;
+                int number = Convert.ToInt32(wholeText, 16);
+                string binar = Convert.ToString(number, 2);
+                textBox1.Text = Convert.ToString(number);
+                textBox2.Text = Convert.ToString(binar);
             } else {
                 label4.Text = "Wrong Input!";
             }
